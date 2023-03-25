@@ -18,10 +18,13 @@ from django.urls import path, include
 from llab2 import views
 
 urlpatterns = [
-    path('home/', views.home_view),
+    path('home/', views.home_view, name='home'),
+    path('list/transport/', views.transport_search_view, name='transport-search-list'),
+    path('list/routes/', views.routes_search_view, name='routes-search-list'),
+
     path('admin/', admin.site.urls),
     path('api/', include('llab2.urls')),  # api
     path('api/search/', include('search.urls')),
     path('api/transport/', include('transport.urls')),
-    path('api/v2/', include('llabDb2.routers')),
+    path('api/routers/', include('llabDb2.routers')),
 ]

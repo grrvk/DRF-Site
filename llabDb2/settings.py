@@ -140,8 +140,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         "rest_framework.authentication.SessionAuthentication",
-        "llab2.authentication.TokenAuthentication",
-        "rest_framework_simplejwt.authentication.JWTAuthentication",
     ],
     'DEFAULT_PERMISSION_CLASSES': [
         "rest_framework.permissions.IsAuthenticatedOrReadOnly"
@@ -154,10 +152,4 @@ ALGOLIA = {
     'APPLICATION_ID': 'SU5PJIVSB5',
     'API_KEY': '4cf79546b98a68aac49c9a5b18ab82f5',
     'INDEX_PREFIX': 'lab2'
-}
-
-SIMPLE_JWT = {
-    "AUTH_HEADER_TYPES": ["Bearer"],
-    "ACCESS_TOKEN_LIFETIME": datetime.timedelta(seconds=30), # minutes=5
-    "REFRESH_TOKEN_LIFETIME": datetime.timedelta(minutes=1), # days=1
 }

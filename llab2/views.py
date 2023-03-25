@@ -30,3 +30,11 @@ def api_home(request, *args, **kwargs):
 
 def home_view(request):
     return render(request, 'main/home.html')
+
+
+def transport_search_view(request):
+    return render(request, 'search/transport_search.html')
+
+
+def routes_search_view(request):
+    return render(request, 'search/route_search.html')

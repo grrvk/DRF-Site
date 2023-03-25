@@ -5,7 +5,7 @@ from .models import Transport
 
 
 class TransportSerializer(serializers.ModelSerializer):
-    edit_url = serializers.SerializerMethodField(read_only=True)
+    # edit_url = serializers.SerializerMethodField(read_only=True)
     url = serializers.HyperlinkedIdentityField(
         view_name='transport-detail',
         lookup_field='pk'
@@ -14,7 +14,6 @@ class TransportSerializer(serializers.ModelSerializer):
         model = Transport
         fields = [
             'url',
-            'edit_url',
             'pk',
             'route',
             'type',

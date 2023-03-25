@@ -40,6 +40,7 @@ def validate_number(value):
     if int(value) < 1:
         raise ValidationError("Invalid number format. Number must be more than 0")
 
+
 class Route(models.Model):
     number = models.CharField(max_length=20, unique=True, validators=[validate_number])
     cities = models.ManyToManyField(City, related_name='cities')
@@ -47,5 +48,5 @@ class Route(models.Model):
     def __str__(self):
         return self.number + ': ' + self.cities.all().first().name + ' - ' + self.cities.all().last().name
 
-
-
+    def city_names(self):
+        return [city.name for city in self.cities.all()]
