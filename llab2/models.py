@@ -37,7 +37,8 @@ def validate_number(value):
     for char in value:
         if not char.isnumeric():
             raise ValidationError("Invalid number format")
-
+    if int(value) < 1:
+        raise ValidationError("Invalid number format. Number must be more than 0")
 
 class Route(models.Model):
     number = models.CharField(max_length=20, unique=True, validators=[validate_number])
@@ -47,17 +48,4 @@ class Route(models.Model):
         return self.number + ': ' + self.cities.all().first().name + ' - ' + self.cities.all().last().name
 
 
-class Transport(models.Model):
-    TRANSPORT_TYPES = (
-        ('Bus', 'Bus'),
-        ('Train', 'Train'),
-        ('Plane', 'Plane'),
-    )
-    route = models.ForeignKey(Route, on_delete=models.SET_NULL, null=True,
-                              related_name='route')
-    type = models.CharField(choices=TRANSPORT_TYPES, max_length=10, default='no type')
-    number = models.CharField(max_length=10, unique=True, validators=[validate_number])
-    num_of_passengers = models.CharField(max_length=10, validators=[validate_number], blank=True)
 
-    def __str__(self):
-        return self.type + ' ' + self.number

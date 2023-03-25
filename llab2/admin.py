@@ -6,7 +6,7 @@ from django.core.exceptions import ValidationError
 from django.forms import CheckboxSelectMultiple
 from django.forms import ModelForm
 
-from .models import City, Route, Transport, Country
+from .models import City, Route, Country
 
 # Register your models here.
 
@@ -35,4 +35,3 @@ class RouteAdmin(admin.ModelAdmin):
 admin.site.register(Country)
 admin.site.register(City)
 admin.site.register(Route, RouteAdmin)
-admin.site.register(Transport)

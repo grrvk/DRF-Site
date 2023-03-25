@@ -1,11 +1,12 @@
-from django.shortcuts import render
+from django.contrib.auth import login
+from django.shortcuts import render, redirect
 from django.http import JsonResponse
 import json
 from django.forms.models import model_to_dict
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
-from .models import Transport
+from transport.models import Transport
 from .serializers import TransportSerializer
 
 
@@ -25,3 +26,7 @@ def api_home(request, *args, **kwargs):
         print(instance)
         return Response(serializer.data)
     return Response({"invalid": "bad data"}, status=400)
+
+
+def home_view(request):
+    return render(request, 'main/home.html')

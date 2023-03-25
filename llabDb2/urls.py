@@ -15,8 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from llab2 import views
 
 urlpatterns = [
+    path('home/', views.home_view),
     path('admin/', admin.site.urls),
-    path('main/', include('llab2.urls')),
+    path('api/', include('llab2.urls')),  # api
+    path('api/search/', include('search.urls')),
+    path('api/transport/', include('transport.urls')),
+    path('api/v2/', include('llabDb2.routers')),
 ]

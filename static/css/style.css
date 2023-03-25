@@ -1,0 +1,11 @@
+{% load static %}
+
+#intro_main {
+    background-image: url("/static/images/bg.jpg");
+    background-size: cover;
+    height: 100%;
+} /* Main page bg */
+
+@media (min-width: 992px) {
+
+}

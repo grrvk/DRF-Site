@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Transport
+from transport.models import Transport
 
 
 class TransportSerializer(serializers.ModelSerializer):
