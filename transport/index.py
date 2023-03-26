@@ -2,7 +2,8 @@ from algoliasearch_django import AlgoliaIndex
 from algoliasearch_django.decorators import register
 
 from .models import Transport
-from llab2.models import City, Route, Country
+from llab2.models import City, Route
+
 
 @register(Transport)
 class TransportIndex(AlgoliaIndex):

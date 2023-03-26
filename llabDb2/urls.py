@@ -25,7 +25,7 @@ urlpatterns = [
     path('list/cities/', views.cities_search_view, name='cities-search-list'),
 
     path('admin/', admin.site.urls),
-    path('api/', include('llab2.urls')),  # api
+    path('api/', include('llab2.urls')),
     path('api/search/', include('search.urls')),
     path('api/transport/', include('transport.urls')),
     path('api/routers/', include('llabDb2.routers')),

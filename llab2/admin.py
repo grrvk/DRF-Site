@@ -1,14 +1,10 @@
 from django.contrib import admin
-
-from django.contrib import admin
 from django.db import models
 from django.core.exceptions import ValidationError
 from django.forms import CheckboxSelectMultiple
 from django.forms import ModelForm
 
 from .models import City, Route, Country
-
-# Register your models here.
 
 
 class RouteForm(ModelForm):

@@ -3,8 +3,6 @@ from django.core.exceptions import ValidationError
 from django.db import models
 
 
-# Create your models here.
-
 def validate_name(value):
     for char in value:
         if not (char.isalpha() or char == ' '):
@@ -46,7 +44,9 @@ class Route(models.Model):
     cities = models.ManyToManyField(City, related_name='cities')
 
     def __str__(self):
+        if self.cities.count() > 2:
+            return self.number + ': ' + self.cities.all().first().name + ' - ... - ' + self.cities.all().last().name
         return self.number + ': ' + self.cities.all().first().name + ' - ' + self.cities.all().last().name
 
     def city_names(self):
-        return [city.name for city in self.cities.all()]
+        return [str(city) for city in self.cities.all()]

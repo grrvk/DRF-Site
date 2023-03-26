@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '###'
+SECRET_KEY = 'django-insecure-z46s@ew-1z#ricd0nem0le)7f12ls4#sx)!5#5&dn+9va@3!03'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -40,12 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'llab2.apps.Llab2Config',
     'rest_framework',
-    'rest_framework.authtoken',
-    'rest_framework_simplejwt',
     'transport',
     'search',
     'algoliasearch_django',
-    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -153,9 +150,6 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        "rest_framework.authentication.SessionAuthentication",
-    ],
     'DEFAULT_PERMISSION_CLASSES': [
         "rest_framework.permissions.IsAuthenticatedOrReadOnly"
     ],
@@ -164,7 +158,7 @@ REST_FRAMEWORK = {
 }
 
 ALGOLIA = {
-    'APPLICATION_ID': '###',
-    'API_KEY': '###',
-    'INDEX_PREFIX': '###'
+    'APPLICATION_ID': 'SU5PJIVSB5',
+    'API_KEY': '4cf79546b98a68aac49c9a5b18ab82f5',
+    'INDEX_PREFIX': 'lab2'
 }
