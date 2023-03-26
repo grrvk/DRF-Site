@@ -32,6 +32,7 @@ class RouteAdmin(admin.ModelAdmin):
     }
 
 
+admin.site.site_url = '/home'
 admin.site.register(Country)
 admin.site.register(City)
 admin.site.register(Route, RouteAdmin)
