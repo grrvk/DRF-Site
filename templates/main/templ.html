@@ -1,4 +1,6 @@
 {% load static %}
+{% load i18n %}
+{% load static i18n languages_helpers %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 <html>
@@ -15,7 +17,6 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         {% block head %}
-                <title>Templ</title>
         {% endblock %}
     </head>
     <body>

@@ -5,3 +5,5 @@ djangorestframework
 djangorestframework-simplejwt
 requests
 django-cors-headers
+flag
+emoji-country-flag

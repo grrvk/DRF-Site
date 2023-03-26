@@ -6,26 +6,13 @@ from django.forms.models import model_to_dict
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
-from transport.models import Transport
-from .serializers import TransportSerializer
-
 
 # Create your views here.
 
 
-@api_view(["POST"])
+@api_view(["GET"])
 def api_home(request, *args, **kwargs):
-    #serializer = TransportSerializer(data=request.data)
-    #if serializer.is_valid():
-    #    print(serializer.data)
-    #    data = serializer.data
-    data = request.data
-    serializer = TransportSerializer(data=request.data)
-    if serializer.is_valid(raise_exception=True):
-        instance = serializer.save()
-        print(instance)
-        return Response(serializer.data)
-    return Response({"invalid": "bad data"}, status=400)
+    return Response({"url": "http://127.0.0.1:8000/home/"})
 
 
 def home_view(request):
@@ -38,3 +25,7 @@ def transport_search_view(request):
 
 def routes_search_view(request):
     return render(request, 'search/route_search.html')
+
+
+def cities_search_view(request):
+    return render(request, 'search/city_search.html')

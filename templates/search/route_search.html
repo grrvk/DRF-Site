@@ -1,31 +1,31 @@
+{% extends "search/navbar.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% load i18n %}
+
+
+{% block head %}
     <meta charset="UTF-8">
-    <title>Search</title>
+    <title>{% trans 'Search' %}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css" integrity="sha256-t2ATOGCtAIZNnzER679jwcFcKYfLlw01gli6F6oszk8=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossorigin="anonymous">
-</head>
-<body>
-        <form style='display:none' id="search-form" method="GET">
-            <input type="text" name="q" placeholder="Your search" />
-            <input type="submit" value="search" />
-        </form>
+{% endblock %}
+        {% block body %}
+            <form style='display:none' id="search-form" method="GET">
+                <input type="text" name="q" placeholder="Your search" />
+                <input type="submit" value="search" />
+            </form>
 
-        <div id="content-container"></div>
-
-
-        <div id="searchbox"></div>
-        <div id="clear-refinements"></div>
-        <h3>Routes</h3>
-        <div id="categoty"></div>
-        <div id="hits"></div>
+            <div id="content-container"></div>
 
 
-        <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js" integrity="sha256-LAGhRRdtVoD6RLo2qDQsU2mp+XVSciKRC8XPOBWmofM=" crossorigin="anonymous"></script>
+            <div id="searchbox"></div>
+            <div id="clear-refinements"></div>
+            <h3>{% trans 'Routes' %}</h3>
+            <div id="categoty"></div>
+            <div id="hits"></div>
 
-        <script src="{% static 'js/route_search.js' %}"></script>
-</body>
-</html>
+            <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js" integrity="sha256-LAGhRRdtVoD6RLo2qDQsU2mp+XVSciKRC8XPOBWmofM=" crossorigin="anonymous"></script>
+
+            <script src="{% static 'js/route_search.js' %}"></script>
+        {% endblock %}

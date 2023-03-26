@@ -32,7 +32,7 @@ class Transport(models.Model):
                               related_name='route')
     type = models.CharField(choices=TRANSPORT_TYPES, max_length=10, default='Bus')
     number = models.CharField(max_length=10, unique=True, validators=[validate_number])
-    num_of_passengers = models.CharField(max_length=10, validators=[validate_number], blank=True)
+    num_of_passengers = models.CharField(max_length=10, validators=[validate_number])
 
     objects = TransportManager()
 

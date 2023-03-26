@@ -9,3 +9,15 @@
 @media (min-width: 992px) {
 
 }
+
+#language-switcher select {
+    width: auto;
+    background-color: transparent;
+    font-size: 22px;
+    border: 0px solid;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    outline: none;
+}

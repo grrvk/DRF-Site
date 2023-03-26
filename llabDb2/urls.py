@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.urls import path, include
 from llab2 import views
@@ -21,6 +22,7 @@ urlpatterns = [
     path('home/', views.home_view, name='home'),
     path('list/transport/', views.transport_search_view, name='transport-search-list'),
     path('list/routes/', views.routes_search_view, name='routes-search-list'),
+    path('list/cities/', views.cities_search_view, name='cities-search-list'),
 
     path('admin/', admin.site.urls),
     path('api/', include('llab2.urls')),  # api
@@ -28,3 +30,7 @@ urlpatterns = [
     path('api/transport/', include('transport.urls')),
     path('api/routers/', include('llabDb2.routers')),
 ]
+
+urlpatterns += i18n_patterns(
+    path('i18n/', include('django.conf.urls.i18n')),
+)

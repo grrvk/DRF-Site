@@ -20,9 +20,3 @@ class TransportSerializer(serializers.ModelSerializer):
             'number',
             'num_of_passengers',
         ]
-
-    def get_edit_url(self, obj):
-        request = self.context.get('request')
-        if request is None:
-            return None
-        return reverse("transport-edit", kwargs={"pk": obj.pk}, request=request)
