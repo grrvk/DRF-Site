@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-z46s@ew-1z#ricd0nem0le)7f12ls4#sx)!5#5&dn+9va@3!03'
+SECRET_KEY = '###'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -158,7 +158,7 @@ REST_FRAMEWORK = {
 }
 
 ALGOLIA = {
-    'APPLICATION_ID': 'SU5PJIVSB5',
-    'API_KEY': '4cf79546b98a68aac49c9a5b18ab82f5',
-    'INDEX_PREFIX': 'lab2'
+    'APPLICATION_ID': '###',
+    'API_KEY': '###',
+    'INDEX_PREFIX': '###'
 }
