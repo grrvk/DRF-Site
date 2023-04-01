@@ -19,7 +19,7 @@ from django.urls import path, include
 from llab2 import views
 
 urlpatterns = [
-    path('home/', views.home_view, name='home'),
+    path('', views.home_view, name='home'),
     path('list/transport/', views.transport_search_view, name='transport-search-list'),
     path('list/routes/', views.routes_search_view, name='routes-search-list'),
     path('list/cities/', views.cities_search_view, name='cities-search-list'),
