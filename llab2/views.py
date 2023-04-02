@@ -5,7 +5,7 @@ from rest_framework.decorators import api_view
 
 @api_view(["GET"])
 def api_home(request, *args, **kwargs):
-    return Response({"url": "http://127.0.0.1:8000/home/"})
+    return Response({"url": "http://127.0.0.1:8000/"})
 
 
 def home_view(request):
