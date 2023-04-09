@@ -45,10 +45,10 @@ function handleSearch(event) {
     })
 }
 
-const searchClient = algoliasearch('SU5PJIVSB5', '2fce78832b7a7a95d29fdb9697b31c47');
+const searchClient = algoliasearch('###', '###');
 
 const search = instantsearch({
-  indexName: 'lab2_Route',
+  indexName: '###',
   searchClient,
 });
 
