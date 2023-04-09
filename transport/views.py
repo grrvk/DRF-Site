@@ -7,6 +7,7 @@ from llab2.mixins import StaffEditorPermissionMixin
 class TransportDetailApiView(StaffEditorPermissionMixin, generics.RetrieveAPIView):
     queryset = Transport.objects.all()
     serializer_class = TransportSerializer
+    lookup_field = 'pk'
 
 
 class TransportListCreateView(StaffEditorPermissionMixin, generics.ListCreateAPIView):

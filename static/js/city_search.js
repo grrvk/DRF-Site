@@ -45,7 +45,7 @@ function handleSearch(event) {
     })
 }
 
-const searchClient = algoliasearch('SU5PJIVSB5', '7ada8d5c16d2ee5a4c857d0c14924fc2');
+const searchClient = algoliasearch('SU5PJIVSB5', '2fce78832b7a7a95d29fdb9697b31c47');
 
 const search = instantsearch({
   indexName: 'lab2_City',

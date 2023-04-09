@@ -18,6 +18,10 @@ class Country(models.Model):
     class Meta:
         verbose_name_plural = "Countries"
 
+    @property
+    def property_should_index(self):
+        return True
+
 
 class City(models.Model):
     name = models.CharField(max_length=250, unique=True, validators=[validate_name])
@@ -29,6 +33,10 @@ class City(models.Model):
 
     class Meta:
         verbose_name_plural = "Cities"
+
+    @property
+    def property_should_index(self):
+        return True
 
 
 def validate_number(value):

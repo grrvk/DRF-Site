@@ -158,7 +158,7 @@ REST_FRAMEWORK = {
 }
 
 ALGOLIA = {
-    'APPLICATION_ID': '###',
-    'API_KEY': '###',
-    'INDEX_PREFIX': '###'
+    'APPLICATION_ID': 'SU5PJIVSB5',
+    'API_KEY': '5fde71ef00626f82761f263811e5a574',
+    'INDEX_PREFIX': 'lab2'
 }

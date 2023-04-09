@@ -1,6 +1,7 @@
 version: "3.9"
 services:
   django:
+    image: 'grvk/llabdb2:latest'
     build: .
     ports:
       - "8000:8000"
