@@ -8,7 +8,9 @@ Written in PyCharm, contains Algolia
 
 Interface (buttons):
 
-Admin page- navigates to Django admin page which gives acces to DB for admin
-Api page- nagigates to DRF main pages which gives acces to DB data in json form and to Api functionality for the admin
+Admin page - navigates to Django admin page which gives acces to DB for admin
+
+Api page - navigates to DRF main pages which gives acces to DB data in json form and to Api functionality for the admin
+
 Search page - navigates to instant search page which uses Algolia
 
